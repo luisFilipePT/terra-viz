@@ -25,3 +25,11 @@
   padding: 2rem;
   color: #ffee00;
 }
+
+.pie-container {
+  height: 40vh;
+}
+
+.header{
+  display: flex;
+}
