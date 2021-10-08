@@ -1,13 +1,8 @@
-import { ResponsiveSwarmPlot } from "@nivo/swarmplot";
-import { useData } from "../hooks/useData";
-// import data from '../data/data.json'
-// make sure parent container have a defined height when using
-// responsive component, otherwise height will be 0 and
-// no chart will be rendered.
-// website examples showcase many properties,
-// you'll often use just a few of them.
+import { ResponsiveSwarmPlot } from '@nivo/swarmplot';
+import { useSwarmData } from '../hooks/useSwarmData';
+
 const SwarmPlot = () => {
-  const data = useData();
+	const swarmData = useSwarmData();
 
   return (
     <ResponsiveSwarmPlot
@@ -40,12 +35,12 @@ const SwarmPlot = () => {
       enableGridX={false}
       enableGridY={false}
       gap={20}
-      data={data}
+      data={swarmData}
       groups={["degens", "lunatics", "interstellars"]}
       groupBy="faction"
       identity="staker"
       value="ste"
-      valueScale={{ type: 'linear', min: 0, max: 70000, reverse: false }}
+      valueScale={{ type: 'linear', min: 5000, max: 70000, reverse: false }}
       size={{ key: "ste", values: [250, 10000], sizes: [2, 10] }}
       simulationIterations={120}
       colors={['#c74dad', '#00e5ff', '#fc8600']}
@@ -60,14 +55,8 @@ const SwarmPlot = () => {
           legendPosition: 'middle',
           legendOffset: -46
       }}
-      axisRight={{
-          orient: 'right',
-          tickSize: 10,
-          tickPadding: 5,
-          tickRotation: 0,
-          legendPosition: 'middle',
-          legendOffset: 76
-      }}
+      axisRight={null}
+      axisLeft={null}
       axisBottom={{
           orient: 'bottom',
           tickSize: 10,
@@ -75,14 +64,6 @@ const SwarmPlot = () => {
           tickRotation: 0,
           legendPosition: 'middle',
           legendOffset: 46
-      }}
-      axisLeft={{
-          orient: 'left',
-          tickSize: 10,
-          tickPadding: 5,
-          tickRotation: 0,
-          legendPosition: 'middle',
-          legendOffset: -76
       }}
     />
   );
