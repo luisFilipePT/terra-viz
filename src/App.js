@@ -1,6 +1,7 @@
 import './App.css';
 import SwarmPlot from "./components/Swarm";
 import Particles from "./components/Particles";
+import DataTable from "./components/DataTable";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
             </div>
             <SwarmPlot/>
           </div>
+        <div className="table-wrapper">
+          <DataTable/>
+        </div>
       </main>
     </div>
   );
