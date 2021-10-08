@@ -31,12 +31,14 @@ const SwarmPlot = () => {
         },
         "grid": {
             "line": {
-                "stroke": "#dddddd",
-                "strokeWidth": 0
+                "stroke": "#ffee00",
+                "strokeWidth": 1
             }
         }
       }}
       layout="horizontal"
+      enableGridX={false}
+      enableGridY={false}
       gap={20}
       data={data}
       groups={["degens", "lunatics", "interstellars"]}
@@ -44,7 +46,7 @@ const SwarmPlot = () => {
       identity="staker"
       value="ste"
       valueScale={{ type: 'linear', min: 0, max: 70000, reverse: false }}
-      size={{ key: "ste", values: [0, 10000], sizes: [2, 8] }}
+      size={{ key: "ste", values: [250, 10000], sizes: [2, 10] }}
       simulationIterations={120}
       colors={['#c74dad', '#00e5ff', '#fc8600']}
       borderColor={{ from: 'color', modifiers: [ [ 'darker', 0.6 ] ] }}
@@ -54,7 +56,7 @@ const SwarmPlot = () => {
           tickSize: 10,
           tickPadding: 5,
           tickRotation: 0,
-          legend: 'starterra energy',
+          legend: 'starterra energy - Top 100 / faction',
           legendPosition: 'middle',
           legendOffset: -46
       }}
