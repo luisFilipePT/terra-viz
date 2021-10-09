@@ -74,13 +74,6 @@ const dataStyle = {
 };
 
 const Navigation = () => {
-  const navigate = (targetId) => {
-    // console.log('document.getElementById(targetId)', document.getElementById(targetId))
-    document.getElementById(targetId).scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-
   return (
     <div style={{ position: "relative", zIndex: 2000 }}>
       <Panel>

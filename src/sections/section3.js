@@ -9,6 +9,7 @@ const Section3 = () => (
           <div style={{ padding: 16, textAlign: "center", height: 250 }}>
             <h4>Degens</h4>
             <img
+              alt="degens"
               width="320px"
               src="https://app.starterra.io/static/media/degens-banner.4bf98705.png"
             />
@@ -16,6 +17,7 @@ const Section3 = () => (
           <div style={{ padding: 16, textAlign: "center", height: 250 }}>
             <h4>Lunatics</h4>
             <img
+              alt="lunatics"
               width="320px"
               src="https://app.starterra.io/static/media/lunatics-banner.d4b8ebc9.png"
             />
@@ -23,6 +25,7 @@ const Section3 = () => (
           <div style={{ padding: 16, textAlign: "center", height: 250 }}>
             <h4>Interstellars</h4>
             <img
+              alt="interstellars"
               width="320px"
               src="https://app.starterra.io/static/media/interstellars-banner.3c689592.png"
             />
