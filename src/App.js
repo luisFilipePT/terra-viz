@@ -5,7 +5,7 @@ import StarTerraLogo from "./components/StarTerraLogo";
 import Section2 from "./sections/section2";
 import Section3 from "./sections/section3";
 import Section4 from "./sections/section4";
-import {Container, Content, FlexboxGrid, Footer, Header, Navbar} from "rsuite";
+import {Container, Content, Footer, Header, Navbar} from "rsuite";
 
 function App() {
   return (

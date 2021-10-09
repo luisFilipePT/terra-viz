@@ -19,9 +19,10 @@
 }
 
 .table-wrapper {
-  margin: 0 auto;
-  padding: 2rem;
+  margin-top: 4rem;
+  padding: 6rem 2rem;
   color: #ffee00;
+  background-image: url("https://starterra.io/image/starterratlo.jpg");
 }
 
 .pie-container {
@@ -33,7 +34,6 @@
   text-align: center;
   padding: 10px;
   background-color: rgb(26, 29, 36);
-  margin-top: 24px;
   font-weight: bold;
 }
 
