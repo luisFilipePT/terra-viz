@@ -34,17 +34,18 @@ const SwarmPlot = () => {
 					},
 				},
 			}}
+			spacing={6}
 			layout={isMobile ? 'vertical' : 'horizontal'}
 			enableGridX={false}
 			enableGridY={false}
-			gap={20}
+			gap={18}
 			data={swarmData}
 			groups={['degens', 'lunatics', 'interstellars']}
 			groupBy="faction"
 			identity="staker"
 			value="ste"
-			valueScale={{ type: 'linear', min: 5000, max: 70000, reverse: false }}
-			size={{ key: 'ste', values: [250, 10000], sizes: [2, 10] }}
+			valueScale={{ type: 'linear', min: 4000, max: 360000 }}
+			size={{ key: 'ste', values: [4000, 300000], sizes: [5, 60] }}
 			simulationIterations={120}
 			colors={['#c74dad', '#00e5ff', '#fc8600']}
 			borderColor={{ from: 'color', modifiers: [['darker', 0.6]] }}
@@ -76,7 +77,7 @@ const SwarmPlot = () => {
 					}}
 				>
 					<div>
-						<text>{`${formatNumber(ste, 2)} STE`}</text>
+						<span>{`${formatNumber(ste, 2)} STE`}</span>
 						<br />
 					</div>
 				</div>

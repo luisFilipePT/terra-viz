@@ -13,7 +13,7 @@ const CustomTooltip = ({
 		}}
 	>
 		<div>
-			<text>{`${formatNumber(value, 2)} ${mode.toUpperCase()}`}</text>
+			<span>{`${formatNumber(value, 2)} ${mode.toUpperCase()}`}</span>
 			<br />
 			<strong>{percentage}%</strong>
 		</div>
