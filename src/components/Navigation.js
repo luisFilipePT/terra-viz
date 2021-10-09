@@ -1,5 +1,6 @@
 import React from 'react';
 import { FlexboxGrid, List, Panel } from 'rsuite';
+import { isMobile } from 'react-device-detect';
 import { Icon } from '@rsuite/icons';
 import { FaHeart, FaUsers, FaStar, FaSkull, FaFunnelDollar } from 'react-icons/fa';
 import { HashLink as Link } from 'react-router-hash-link';
@@ -49,6 +50,13 @@ const styleCenter = {
 	height: '60px',
 };
 
+const styleCenterMobile = {
+	display: isMobile ? 'none' : 'flex',
+	justifyContent: 'center',
+	alignItems: 'center',
+	height: '60px',
+};
+
 const slimText = {
 	fontSize: '0.7em',
 	color: '#ffee00',
@@ -63,7 +71,7 @@ const titleStyle = {
 };
 
 const dataStyle = {
-	fontSize: '1.2em',
+	fontSize: isMobile ? '1em' : '1.2em',
 	fontWeight: 500,
 };
 
@@ -76,7 +84,7 @@ const Navigation = () => {
 						<List.Item key={item['title']} index={index + 1}>
 							<FlexboxGrid>
 								{/*icon*/}
-								<FlexboxGrid.Item colspan={2} style={styleCenter}>
+								<FlexboxGrid.Item colspan={isMobile ? 0 : 2} style={styleCenterMobile}>
 									{React.cloneElement(item['icon'], {
 										style: {
 											color: 'darkgrey',
@@ -86,9 +94,9 @@ const Navigation = () => {
 								</FlexboxGrid.Item>
 								{/*base info*/}
 								<FlexboxGrid.Item
-									colspan={6}
+									colspan={isMobile ? 0 : 6}
 									style={{
-										...styleCenter,
+										...styleCenterMobile,
 										flexDirection: 'column',
 										alignItems: 'flex-start',
 										overflow: 'hidden',
@@ -100,7 +108,7 @@ const Navigation = () => {
 									</div>
 								</FlexboxGrid.Item>
 								{/*description data*/}
-								<FlexboxGrid.Item colspan={9} style={styleCenter}>
+								<FlexboxGrid.Item colspan={isMobile ? 17 : 9} style={styleCenter}>
 									<div style={{ textAlign: 'center' }}>
 										<div style={dataStyle}>{item['description']}</div>
 									</div>

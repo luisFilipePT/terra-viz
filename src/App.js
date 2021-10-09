@@ -57,7 +57,8 @@ function App() {
 				<Footer>
 					<div id="section6" className="footer">
 						<span className="footer-text">
-							Made with ❤️ for StarTerra by <a href="https://twitter.com/_luisFilipePT">@_luisFilipePT</a> &{' '}
+							Made with <span className="footer-heart">❤️</span> for StarTerra by{' '}
+							<a href="https://twitter.com/_luisFilipePT">@_luisFilipePT</a> &{' '}
 							<a href="https://twitter.com/JoaoJesus_94">@JoaoJesus_94</a>
 						</span>
 					</div>
