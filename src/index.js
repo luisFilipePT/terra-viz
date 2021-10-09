@@ -9,21 +9,21 @@ import "./App.css";
 import App from './App';
 
 const Web = () => (
-  <React.StrictMode>
-    <CustomProvider theme="dark">
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={App} />
-        </Switch>
-      </BrowserRouter>
-    </CustomProvider>
-  </React.StrictMode>
+	<React.StrictMode>
+		<CustomProvider theme="dark">
+			<BrowserRouter>
+				<Switch>
+					<Route exact path="/" component={App} />
+				</Switch>
+			</BrowserRouter>
+		</CustomProvider>
+	</React.StrictMode>
 );
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 
 if (rootElement.hasChildNodes()) {
-  hydrate(<Web />, rootElement);
+	hydrate(<Web />, rootElement);
 } else {
-  render(<Web />, rootElement);
+	render(<Web />, rootElement);
 }
