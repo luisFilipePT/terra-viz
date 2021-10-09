@@ -1,4 +1,5 @@
 import { Container, Content, Footer, Header, Navbar } from 'rsuite';
+import { Helmet } from 'react-helmet';
 
 import "./App.css";
 
@@ -13,6 +14,23 @@ import Navigation from './components/Navigation';
 function App() {
   return (
     <>
+        <Helmet>
+          <title>StarTerra - DataViz</title>
+          <meta name="description" content="The Best Data Visualization for StarTerra" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@_luisFilipePT " />
+          <meta name="twitter:creator" content="@JoaoJesus_94" />
+          <meta name="twitter:title" content="StarTerra - DataViz" />
+          <meta name="twitter:description" content="The Best Data Visualization for StarTerra" />
+          <meta name="twitter:image" content="https://starterra.io/image/terra1.jpg"/>
+          <meta property="og:title" content="StarTerra - DataViz" />
+          <meta property="og:description" content="The Best Data Visualization for StarTerra" />
+          <meta property="og:image" content="https://starterra.io/image/terra1.jpg" />
+          <meta property="og:url" content="https://starterra-viz.netlify.app/" />
+          <meta property="og:site_name" content="StarTerra - DataViz" />
+          <meta property="og:locale" content="en_US" />
+          <meta property="og:type" content="website" />
+      </Helmet>
       <Particles />
       <Container>
         <Header>
