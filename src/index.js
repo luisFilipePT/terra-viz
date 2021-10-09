@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { hydrate, render } from 'react-dom';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import { CustomProvider } from 'rsuite';
 
@@ -8,7 +8,7 @@ import './index.css';
 
 import App from './App';
 
-ReactDOM.render(
+const Web = () => (
   <React.StrictMode>
     <CustomProvider theme="dark">
       <BrowserRouter>
@@ -17,6 +17,13 @@ ReactDOM.render(
         </Switch>
       </BrowserRouter>
     </CustomProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
+
+const rootElement = document.getElementById("root");
+
+if (rootElement.hasChildNodes()) {
+  hydrate(<Web />, rootElement);
+} else {
+  render(<Web />, rootElement);
+}
