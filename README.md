@@ -10,6 +10,8 @@
   The Best Data Visualization for StarTerra
 </h3>
 
+<img src="/starterra-viz.png" alt="screenshot"/>
+
 ## About project
 
 This repo is our shot at this a contest released by StarTerra about data visualiztaion   
