@@ -1,8 +1,8 @@
-import { Col, FlexboxGrid } from 'rsuite';
-import SwarmPlot from '../components/Swarm';
+import { Col, FlexboxGrid } from "rsuite";
+import SwarmPlot from "../components/Swarm";
 
 const Section3 = () => (
-  <div className="show-grid">
+  <div id="section3" className="show-grid">
     <FlexboxGrid align="middle">
       <FlexboxGrid.Item as={Col} colspan={24} md={6} smHidden>
         <div style={{ paddingTop: 30 }}>
