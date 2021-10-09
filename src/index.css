@@ -1,7 +1,12 @@
 body {
-  margin: 0;
-  background-color: #282c34 !important;
-  font-family: Raleway, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	background-color: #282c34 !important;
+	font-family: Raleway, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+main {
+	padding-right: 16px;
+	padding-left: 16px;
 }

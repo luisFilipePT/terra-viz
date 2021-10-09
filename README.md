@@ -14,7 +14,7 @@
 
 ## About project
 
-This repo is our shot at this a contest released by StarTerra about data visualiztaion   
+This repo is our shot at this a contest released by StarTerra about data visualiztaion  
 You can read more about it [here](https://medium.com/@StarTerra/starterra-dataset-visualization-contest-ba25429b1886)
 
 ## What’s In This Document
