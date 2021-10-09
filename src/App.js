@@ -15,11 +15,25 @@ function App() {
       </header>
       <main>
         <div className="header">
+          <div className="info-box-wrapper">
+            <InfoBox title="StarTerra Energy ➡️">
+              <ul>
+                <li>Total StarTerra Energy</li>
+                <li>StarTerra Energy by faction</li>
+                <li>Hover to see each faction? what</li>
+              </ul>
+            </InfoBox>
+          </div>
           <div className="pie-container" style={{ flex: 1 }}>
             <Pie />
           </div>
-          <div style={{ display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'center', zIndex: 1000}}>
-            <InfoBox/>
+          <div className="info-box-wrapper">
+            <InfoBox title="Top contributors ⬇️">
+              <ul>
+                <li>Top 100 contributors by faction</li>
+                <li>Hover each contributor StarTerra energy</li>
+              </ul>
+            </InfoBox>
           </div>
         </div>
         <div className="swarm-container">
