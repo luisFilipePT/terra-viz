@@ -40,10 +40,8 @@ function App() {
 				/>
 				<Header>
 					<Navbar>
-						<Navbar.Brand>
-							<div className="App-header">
-								<StarTerraLogo />
-							</div>
+						<Navbar.Brand href="https://starterra.io/">
+							<StarTerraLogo />
 						</Navbar.Brand>
 					</Navbar>
 				</Header>
