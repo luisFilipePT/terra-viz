@@ -2,7 +2,7 @@ import "./App.css";
 import SwarmPlot from "./components/Swarm";
 import Particles from "./components/Particles";
 import DataTable from "./components/DataTable";
-import Pie from "./components/Pie";
+import StakerPie from "./components/Pie/StakerPie";
 import StarTerraLogo from "./components/StarTerraLogo";
 import InfoBox from "./components/InfoBox";
 
@@ -11,10 +11,10 @@ function App() {
     <div className="App">
       <Particles />
       <header className="App-header">
-        <StarTerraLogo/>
+        <StarTerraLogo />
       </header>
       <main>
-        <div className="header">
+        <div className="top-wrapper">
           <div className="info-box-wrapper">
             <InfoBox title="StarTerra Energy ➡️">
               <ul>
@@ -25,7 +25,7 @@ function App() {
             </InfoBox>
           </div>
           <div className="pie-container" style={{ flex: 1 }}>
-            <Pie />
+            <StakerPie />
           </div>
           <div className="info-box-wrapper">
             <InfoBox title="Top contributors ⬇️">
@@ -35,6 +35,11 @@ function App() {
               </ul>
             </InfoBox>
           </div>
+        </div>
+        <div style={{ display: "flex", height: "40vh" }}>
+          <StakerPie />
+          <StakerPie />
+          <StakerPie />
         </div>
         <div className="swarm-container">
           <div
@@ -46,21 +51,21 @@ function App() {
               justifyContent: "space-around",
             }}
           >
-            <div style={{ padding: 16, textAlign: 'center'}}>
+            <div style={{ padding: 16, textAlign: "center" }}>
               <h4>Degens</h4>
               <img
                 width="320px"
                 src="https://app.starterra.io/static/media/degens-banner.4bf98705.png"
               />
             </div>
-            <div style={{ padding: 16, textAlign: 'center'}}>
-            <h4>Lunatics</h4>
-            <img
-              width="320px"
-              src="https://app.starterra.io/static/media/lunatics-banner.d4b8ebc9.png"
+            <div style={{ padding: 16, textAlign: "center" }}>
+              <h4>Lunatics</h4>
+              <img
+                width="320px"
+                src="https://app.starterra.io/static/media/lunatics-banner.d4b8ebc9.png"
               />
             </div>
-            <div style={{ padding: 16, textAlign: 'center'}}>
+            <div style={{ padding: 16, textAlign: "center" }}>
               <h4>Interstellars</h4>
               <img
                 width="320px"
