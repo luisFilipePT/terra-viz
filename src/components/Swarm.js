@@ -1,4 +1,6 @@
 import { ResponsiveSwarmPlot } from '@nivo/swarmplot';
+import { isMobile } from 'react-device-detect';
+
 import { useSwarmData } from '../hooks/useSwarmData';
 import { formatNumber } from '../hooks/utils';
 
@@ -32,7 +34,7 @@ const SwarmPlot = () => {
 					},
 				},
 			}}
-			layout="horizontal"
+			layout={isMobile ? 'vertical' : 'horizontal'}
 			enableGridX={false}
 			enableGridY={false}
 			gap={20}
@@ -50,19 +52,19 @@ const SwarmPlot = () => {
 			axisTop={{
 				orient: 'top',
 				tickSize: 10,
-				tickPadding: 5,
-				tickRotation: 0,
+				tickPadding: isMobile ? 15 : 5,
+				tickRotation: isMobile ? 45 : 0,
 				legend: 'starterra energy - Top 100 / faction',
 				legendPosition: 'middle',
-				legendOffset: -46,
+				legendOffset: isMobile ? 0 : -46,
 			}}
 			axisRight={null}
 			axisLeft={null}
 			axisBottom={{
 				orient: 'bottom',
 				tickSize: 10,
-				tickPadding: 5,
-				tickRotation: 0,
+				tickPadding: isMobile ? 15 : 5,
+				tickRotation: isMobile ? 50 : 0,
 				legendPosition: 'middle',
 				legendOffset: 46,
 			}}
