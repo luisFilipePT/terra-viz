@@ -3,7 +3,7 @@ import InfoBox from '../components/InfoBox';
 import StakerPie from '../components/Pie/StakerPie';
 
 const Section4 = () => (
-  <div className="show-grid">
+  <div id="section4" className="show-grid">
     <FlexboxGrid justify="space-around" align="middle">
       <FlexboxGrid.Item as={Col} colspan={24} md={6}>
         <div className="pie-container">

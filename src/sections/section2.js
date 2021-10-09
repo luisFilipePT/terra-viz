@@ -3,7 +3,7 @@ import InfoBox from '../components/InfoBox';
 import StakerPie from '../components/Pie/StakerPie';
 
 const Section2 = () => (
-  <div className="show-grid">
+  <div className="show-grid" id="section2">
     <FlexboxGrid justify="space-around" align="middle">
       <FlexboxGrid.Item as={Col} colspan={24} md={5}>
         <InfoBox title="StarTerra Energy ➡️">
