@@ -1,6 +1,6 @@
-import { Col, FlexboxGrid } from 'rsuite';
-import InfoBox from '../components/InfoBox';
-import StakerPie from '../components/Pie/StakerPie';
+import { Col, FlexboxGrid } from "rsuite";
+import InfoBox from "../components/InfoBox";
+import Pie from "../components/Pie";
 
 const Section2 = () => (
   <div className="show-grid" id="section2">
@@ -16,7 +16,7 @@ const Section2 = () => (
       </FlexboxGrid.Item>
       <FlexboxGrid.Item as={Col} colspan={24} md={8}>
         <div className="pie-container">
-          <StakerPie />
+          <Pie mode="stakers" />
         </div>
       </FlexboxGrid.Item>
       <FlexboxGrid.Item as={Col} colspan={24} md={5}>

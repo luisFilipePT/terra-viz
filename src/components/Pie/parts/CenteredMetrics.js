@@ -1,5 +1,7 @@
+import { formatNumber } from "../../../hooks/utils";
+
 const CenteredMetrics = ({ dataWithArc, centerX, centerY }) => {
-  const total = dataWithArc.reduce((acc, cur) => acc + cur.value, 0);
+  const total = dataWithArc.reduce((acc, cur) => acc + Number(cur.value), 0);
 
   return (
     <text
@@ -13,7 +15,7 @@ const CenteredMetrics = ({ dataWithArc, centerX, centerY }) => {
         fontWeight: 600,
       }}
     >
-      {total}
+      {formatNumber(total, 2, true)}
     </text>
   );
 };

@@ -1,7 +1,10 @@
+import { formatNumber } from "../../../hooks/utils";
+
 const CustomTooltip = ({
   datum: {
-    data: { percentage },
+    data: { percentage, value, ...props },
   },
+  mode,
 }) => (
   <div
     style={{
@@ -9,7 +12,11 @@ const CustomTooltip = ({
       background: "#333333",
     }}
   >
-    <strong>{percentage}%</strong>
+    <div>
+      <text>{`${formatNumber(value, 2)} ${mode.toUpperCase()}`}</text>
+      <br />
+      <strong>{percentage}%</strong>
+    </div>
   </div>
 );
 

@@ -1,4 +1,5 @@
 import { animated } from "@react-spring/web";
+import { formatNumber } from "../../../hooks/utils";
 
 const ArcLabels = ({ style, label }) => (
   <animated.g transform={style.transform} style={{ pointerEvents: "none" }}>
@@ -11,7 +12,7 @@ const ArcLabels = ({ style, label }) => (
         fontWeight: 800,
       }}
     >
-      {label}
+      {formatNumber(label, 2, true)}
     </text>
   </animated.g>
 );

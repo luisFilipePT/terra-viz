@@ -1,19 +1,18 @@
-import Table  from 'rsuite/Table';
+import Table from "rsuite/Table";
 
-import {useSwarmData} from "../hooks/useSwarmData";
+import { useSwarmData } from "../hooks/useSwarmData";
 
-const tableHeaderStyle = { fontSize: 16, color: 'white'};
+const tableHeaderStyle = { fontSize: 16, color: "white" };
 
 const DataTable = () => {
   const data = useSwarmData();
 
-  console.log('data', data);
   return (
     <Table
       virtualized
       height={400}
       data={data}
-      onRowClick={data => {
+      onRowClick={(data) => {
         console.log(data);
       }}
     >

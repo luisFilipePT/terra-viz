@@ -44,3 +44,7 @@
   position: relative;
   padding: 6px;
 }
+
+.rs-panel-header{
+  color: #ffee00;
+}
