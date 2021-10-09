@@ -7,9 +7,14 @@ const getStakersPerFaction = (
   interstellars,
   numberOfRecords
 ) => {
-  const degensPercentage = average(degens.length).toFixed(2);
-  const lunaticsPercentage = average(lunatics.length).toFixed(2);
-  const interstellarsPercentage = average(interstellars.length).toFixed(2);
+  const degensPercentage = average(degens.length, numberOfRecords).toFixed(2);
+  const lunaticsPercentage = average(lunatics.length, numberOfRecords).toFixed(
+    2
+  );
+  const interstellarsPercentage = average(
+    interstellars.length,
+    numberOfRecords
+  ).toFixed(2);
 
   return [
     {
