@@ -27,23 +27,32 @@ function App() {
             style={{
               display: "flex",
               flexDirection: "column",
-              paddingTop: 62,
-              paddingBottom: 65,
+              paddingTop: 52,
+              paddingBottom: 85,
               justifyContent: "space-around",
             }}
           >
-            <img
-              width="320px"
-              src="https://app.starterra.io/static/media/degens-banner.4bf98705.png"
-            />
+            <div style={{ padding: 16, textAlign: 'center'}}>
+              <h4>Degens</h4>
+              <img
+                width="320px"
+                src="https://app.starterra.io/static/media/degens-banner.4bf98705.png"
+              />
+            </div>
+            <div style={{ padding: 16, textAlign: 'center'}}>
+            <h4>Lunatics</h4>
             <img
               width="320px"
               src="https://app.starterra.io/static/media/lunatics-banner.d4b8ebc9.png"
-            />
-            <img
-              width="320px"
-              src="https://app.starterra.io/static/media/interstellars-banner.3c689592.png"
-            />
+              />
+            </div>
+            <div style={{ padding: 16, textAlign: 'center'}}>
+              <h4>Interstellars</h4>
+              <img
+                width="320px"
+                src="https://app.starterra.io/static/media/interstellars-banner.3c689592.png"
+              />
+            </div>
           </div>
           <SwarmPlot />
         </div>
