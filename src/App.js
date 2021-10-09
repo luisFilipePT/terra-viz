@@ -2,8 +2,6 @@ import { Container, Content, Footer, Header, Navbar } from 'rsuite';
 import GithubCorner from 'react-github-corner';
 import { Helmet } from 'react-helmet';
 
-import "./App.css";
-
 import Particles from "./components/Particles";
 import DataTable from "./components/DataTable";
 import StarTerraLogo from "./components/StarTerraLogo";
@@ -42,11 +40,11 @@ function App() {
       />
         <Header>
           <Navbar>
-            <Navbar.Header>
+            <Navbar.Brand>
               <div className="App-header">
                 <StarTerraLogo />
               </div>
-            </Navbar.Header>
+            </Navbar.Brand>
           </Navbar>
         </Header>
         <Content>

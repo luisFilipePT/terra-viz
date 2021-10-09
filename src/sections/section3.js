@@ -11,6 +11,7 @@ const Section3 = () => (
             <img
               alt="degens"
               width="320px"
+              height="123px"
               src="https://app.starterra.io/static/media/degens-banner.4bf98705.png"
             />
           </div>
@@ -19,6 +20,7 @@ const Section3 = () => (
             <img
               alt="lunatics"
               width="320px"
+              height="123px"
               src="https://app.starterra.io/static/media/lunatics-banner.d4b8ebc9.png"
             />
           </div>
@@ -27,6 +29,7 @@ const Section3 = () => (
             <img
               alt="interstellars"
               width="320px"
+              height="123px"
               src="https://app.starterra.io/static/media/interstellars-banner.3c689592.png"
             />
           </div>

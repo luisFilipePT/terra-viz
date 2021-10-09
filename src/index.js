@@ -4,7 +4,7 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import { CustomProvider } from 'rsuite';
 
 import 'rsuite/dist/rsuite.min.css';
-import './index.css';
+import "./App.css";
 
 import App from './App';
 
