@@ -27,3 +27,19 @@
 .pie-container {
   height: 40vh;
 }
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(26, 29, 36);
+  margin-top: 24px;
+  font-weight: bold;
+}
+
+.footer-text {
+  background-color: rgb(26, 29, 36);
+  z-index: 1000;
+  position: relative;
+  padding: 6px;
+}

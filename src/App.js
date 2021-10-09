@@ -29,7 +29,14 @@ function App() {
             <DataTable />
           </div>
         </Content>
-        <Footer>Footer</Footer>
+        <Footer>
+          <div className="footer">
+            <span className="footer-text">
+              Made with ❤️ for StarTerra by <a href="https://twitter.com/_luisFilipePT">@_luisFilipePT</a> & <a
+              href="https://twitter.com/JoaoJesus_94">@JoaoJesus_94</a>
+            </span>
+          </div>
+        </Footer>
       </Container>
     </>
   );
