@@ -7,16 +7,11 @@ const tableHeaderStyle = { fontSize: 16, color: 'white' };
 const DataTable = () => {
 	const data = useSwarmData();
 
+	if (!data) return null;
+
 	return (
 		<div>
-			<Table
-				virtualized
-				height={400}
-				data={data}
-				onRowClick={data => {
-					console.log(data);
-				}}
-			>
+			<Table virtualized height={400} data={data}>
 				<Table.Column width={200} align="center" fixed>
 					<Table.HeaderCell style={tableHeaderStyle}>Staker</Table.HeaderCell>
 					<Table.Cell dataKey="staker" />
