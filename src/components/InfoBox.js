@@ -1,9 +1,11 @@
 import Notification from 'rsuite/Notification';
 
 const InfoBox = ({ title, children }) => (
-  <Notification type="info" header={title}>
-    { children }
-  </Notification>
+  <div style={{ zIndex: 1000, position: 'relative'}}>
+    <Notification type="info" header={title}>
+      { children }
+    </Notification>
+  </div>
 );
 
 export default InfoBox;
