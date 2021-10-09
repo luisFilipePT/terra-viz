@@ -3,25 +3,32 @@ import SwarmPlot from "./components/Swarm";
 import Particles from "./components/Particles";
 import DataTable from "./components/DataTable";
 import Pie from "./components/Pie";
+import StarTerraLogo from "./components/StarTerraLogo";
+import InfoBox from "./components/InfoBox";
 
 function App() {
   return (
     <div className="App">
       <Particles />
-      <header className="App-header">StarTerra Viz</header>
+      <header className="App-header">
+        <StarTerraLogo/>
+      </header>
       <main>
         <div className="header">
           <div className="pie-container" style={{ flex: 1 }}>
             <Pie />
           </div>
-          <div style={{ flex: 2, backgroundColor: "tomato" }}></div>
+          <div style={{ display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'center', zIndex: 1000}}>
+            <InfoBox/>
+          </div>
         </div>
         <div className="swarm-container">
           <div
             style={{
               display: "flex",
               flexDirection: "column",
-              paddingTop: 60,
+              paddingTop: 62,
+              paddingBottom: 65,
               justifyContent: "space-around",
             }}
           >
@@ -31,11 +38,11 @@ function App() {
             />
             <img
               width="320px"
-              src="https://app.starterra.io/static/media/interstellars-banner.3c689592.png"
+              src="https://app.starterra.io/static/media/lunatics-banner.d4b8ebc9.png"
             />
             <img
               width="320px"
-              src="https://app.starterra.io/static/media/lunatics-banner.d4b8ebc9.png"
+              src="https://app.starterra.io/static/media/interstellars-banner.3c689592.png"
             />
           </div>
           <SwarmPlot />
