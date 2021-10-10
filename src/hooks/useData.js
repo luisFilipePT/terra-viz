@@ -83,7 +83,7 @@ const getPerFaction = (degens, lunatics, interstellars, all, predicate) => {
 };
 
 export const useData = () => {
-	const [data, setData] = useState([[], [], [], [], []]);
+	const [data, setData] = useState([[], [], [], [], [], []]);
 
 	const parseData = results => {
 		const totalResults = results.data.length;
