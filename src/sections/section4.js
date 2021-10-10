@@ -1,4 +1,5 @@
 import { Col, FlexboxGrid } from 'rsuite';
+
 import InfoBox from '../components/InfoBox';
 import Pie from '../components/Pie';
 
@@ -9,7 +10,7 @@ const Section4 = () => (
 				<div className="pie-container">
 					<Pie mode="lp" />
 				</div>
-				<InfoBox title="Top contributors ⬇️">
+				<InfoBox title="LP Staking">
 					<ul>
 						<li>Top 100 contributors by faction</li>
 						<li>Hover each contributor StarTerra energy</li>
@@ -20,7 +21,7 @@ const Section4 = () => (
 				<div className="pie-container">
 					<Pie mode="stt" />
 				</div>
-				<InfoBox title="Top contributors ⬇️">
+				<InfoBox title="Single Staking">
 					<ul>
 						<li>Top 100 contributors by faction</li>
 						<li>Hover each contributor StarTerra energy</li>
@@ -31,7 +32,7 @@ const Section4 = () => (
 				<div className="pie-container">
 					<Pie mode="ste" />
 				</div>
-				<InfoBox title="Top contributors ⬇️">
+				<InfoBox title="StarTerra Energy">
 					<ul>
 						<li>Top 100 contributors by faction</li>
 						<li>Hover each contributor StarTerra energy</li>

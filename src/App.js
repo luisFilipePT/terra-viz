@@ -1,6 +1,7 @@
 import { Container, Content, Footer, Header, Navbar } from 'rsuite';
 import GithubCorner from 'react-github-corner';
 import { Helmet } from 'react-helmet';
+import Fade from 'react-reveal/Fade';
 
 import Particles from './components/Particles';
 import DataTable from './components/DataTable';
@@ -46,7 +47,9 @@ function App() {
 					</Navbar>
 				</Header>
 				<Content>
-					<Navigation />
+					<Fade>
+						<Navigation />
+					</Fade>
 					<Section2 />
 					<Section3 />
 					<Section4 />
