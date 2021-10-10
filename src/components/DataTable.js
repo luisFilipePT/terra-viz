@@ -28,14 +28,9 @@ const DataTable = ({ data }) => {
 					<Table.Cell dataKey="ste" />
 				</Table.Column>
 
-				<Table.Column width={250}>
+				<Table.Column minwidth={250} flexGrow={2}>
 					<Table.HeaderCell style={tableHeaderStyle}>STT</Table.HeaderCell>
 					<Table.Cell dataKey="stt" />
-				</Table.Column>
-
-				<Table.Column flexGrow={1}>
-					<Table.HeaderCell />
-					<Table.Cell />
 				</Table.Column>
 			</Table>
 		</div>
