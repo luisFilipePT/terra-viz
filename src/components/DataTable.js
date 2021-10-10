@@ -13,24 +13,29 @@ const DataTable = ({ data }) => {
 					<Table.Cell dataKey="staker" />
 				</Table.Column>
 
-				<Table.Column width={160}>
+				<Table.Column width={200}>
 					<Table.HeaderCell style={tableHeaderStyle}>Faction</Table.HeaderCell>
 					<Table.Cell dataKey="faction" />
 				</Table.Column>
 
-				<Table.Column flexGrow={1}>
+				<Table.Column width={250}>
 					<Table.HeaderCell style={tableHeaderStyle}>LP</Table.HeaderCell>
 					<Table.Cell dataKey="lp" />
 				</Table.Column>
 
-				<Table.Column flexGrow={1}>
+				<Table.Column width={250}>
 					<Table.HeaderCell style={tableHeaderStyle}>STE</Table.HeaderCell>
 					<Table.Cell dataKey="ste" />
 				</Table.Column>
 
-				<Table.Column flexGrow={1}>
+				<Table.Column width={250}>
 					<Table.HeaderCell style={tableHeaderStyle}>STT</Table.HeaderCell>
 					<Table.Cell dataKey="stt" />
+				</Table.Column>
+
+				<Table.Column flexGrow={1}>
+					<Table.HeaderCell />
+					<Table.Cell />
 				</Table.Column>
 			</Table>
 		</div>
