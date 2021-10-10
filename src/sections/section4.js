@@ -6,7 +6,7 @@ import Pie from '../components/Pie';
 const Section4 = ({ data }) => (
 	<div id="section4" className="show-grid">
 		<FlexboxGrid justify="space-around" align="middle">
-			<FlexboxGrid.Item as={Col} colspan={24} md={6}>
+			<FlexboxGrid.Item as={Col} colspan={24} md={7}>
 				<div className="pie-container">
 					<Pie data={data.lp} mode="lp" />
 				</div>
@@ -17,7 +17,7 @@ const Section4 = ({ data }) => (
 					</ul>
 				</InfoBox>
 			</FlexboxGrid.Item>
-			<FlexboxGrid.Item as={Col} colspan={24} md={6}>
+			<FlexboxGrid.Item as={Col} colspan={24} md={7}>
 				<div className="pie-container">
 					<Pie data={data.stt} mode="stt" />
 				</div>
@@ -28,7 +28,7 @@ const Section4 = ({ data }) => (
 					</ul>
 				</InfoBox>
 			</FlexboxGrid.Item>
-			<FlexboxGrid.Item as={Col} colspan={24} md={6}>
+			<FlexboxGrid.Item as={Col} colspan={24} md={7}>
 				<div className="pie-container">
 					<Pie data={data.ste} mode="ste" />
 				</div>

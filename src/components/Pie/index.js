@@ -4,7 +4,6 @@ import CenteredMetrics from './parts/CenteredMetrics';
 import Tooltip from './parts/Tooltip';
 
 const Pie = ({ data, mode }) => {
-	console.log(data);
 	return (
 		<ResponsivePie
 			data={data}
