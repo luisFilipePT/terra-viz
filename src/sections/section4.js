@@ -3,12 +3,12 @@ import { Col, FlexboxGrid } from 'rsuite';
 import InfoBox from '../components/InfoBox';
 import Pie from '../components/Pie';
 
-const Section4 = () => (
+const Section4 = ({ data }) => (
 	<div id="section4" className="show-grid">
 		<FlexboxGrid justify="space-around" align="middle">
 			<FlexboxGrid.Item as={Col} colspan={24} md={6}>
 				<div className="pie-container">
-					<Pie mode="lp" />
+					<Pie data={data.lp} mode="lp" />
 				</div>
 				<InfoBox title="LP Staking">
 					<ul>
@@ -19,7 +19,7 @@ const Section4 = () => (
 			</FlexboxGrid.Item>
 			<FlexboxGrid.Item as={Col} colspan={24} md={6}>
 				<div className="pie-container">
-					<Pie mode="stt" />
+					<Pie data={data.stt} mode="stt" />
 				</div>
 				<InfoBox title="Single Staking">
 					<ul>
@@ -30,7 +30,7 @@ const Section4 = () => (
 			</FlexboxGrid.Item>
 			<FlexboxGrid.Item as={Col} colspan={24} md={6}>
 				<div className="pie-container">
-					<Pie mode="ste" />
+					<Pie data={data.ste} mode="ste" />
 				</div>
 				<InfoBox title="StarTerra Energy">
 					<ul>

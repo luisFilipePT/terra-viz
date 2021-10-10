@@ -2,7 +2,7 @@ import { Col, FlexboxGrid } from 'rsuite';
 import InfoBox from '../components/InfoBox';
 import Pie from '../components/Pie';
 
-const Section2 = () => (
+const Section2 = ({ data }) => (
 	<div className="show-grid" id="section2">
 		<FlexboxGrid justify="space-around" align="middle">
 			<FlexboxGrid.Item as={Col} colspan={24} md={5}>
@@ -16,7 +16,7 @@ const Section2 = () => (
 			</FlexboxGrid.Item>
 			<FlexboxGrid.Item as={Col} colspan={24} md={8}>
 				<div className="pie-container">
-					<Pie mode="stakers" />
+					<Pie mode="stakers" data={data} />
 				</div>
 			</FlexboxGrid.Item>
 			<FlexboxGrid.Item as={Col} colspan={24} md={5}>

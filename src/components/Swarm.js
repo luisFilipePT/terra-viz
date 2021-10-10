@@ -1,12 +1,9 @@
 import { ResponsiveSwarmPlot } from '@nivo/swarmplot';
 import { isMobile } from 'react-device-detect';
 
-import { useSwarmData } from '../hooks/useSwarmData';
 import { formatNumber } from '../hooks/utils';
 
-const SwarmPlot = () => {
-	const swarmData = useSwarmData();
-
+const SwarmPlot = ({ data }) => {
 	return (
 		<ResponsiveSwarmPlot
 			theme={{
@@ -39,7 +36,7 @@ const SwarmPlot = () => {
 			enableGridX={false}
 			enableGridY={false}
 			gap={18}
-			data={swarmData}
+			data={data}
 			groups={['degens', 'lunatics', 'interstellars']}
 			groupBy="faction"
 			identity="staker"

@@ -10,8 +10,11 @@ import Section2 from './sections/section2';
 import Section3 from './sections/section3';
 import Section4 from './sections/section4';
 import Navigation from './components/Navigation';
+import { useData } from './hooks/useData';
 
 function App() {
+	const [top100factionsData, stakersPieData, lp, stt, ste, tableData] = useData();
+
 	return (
 		<>
 			<Helmet>
@@ -50,11 +53,11 @@ function App() {
 					<Fade>
 						<Navigation />
 					</Fade>
-					<Section2 />
-					<Section3 />
-					<Section4 />
+					<Section2 data={stakersPieData} />
+					<Section3 data={top100factionsData} />
+					<Section4 data={{ lp, stt, ste }} />
 					<div id="section5" className="table-wrapper">
-						<DataTable />
+						<DataTable data={tableData} />
 					</div>
 				</Content>
 				<Footer>

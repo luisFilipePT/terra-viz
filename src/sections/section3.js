@@ -3,7 +3,7 @@ import Zoom from 'react-reveal/Zoom';
 
 import SwarmPlot from '../components/Swarm';
 
-const Section3 = () => (
+const Section3 = ({ data }) => (
 	<div id="section3" className="show-grid">
 		<FlexboxGrid align="middle">
 			<FlexboxGrid.Item as={Col} colspan={24} md={6}>
@@ -43,7 +43,7 @@ const Section3 = () => (
 			</FlexboxGrid.Item>
 			<FlexboxGrid.Item as={Col} colspan={24} md={18} sm={24}>
 				<div className="swarm-container">
-					<SwarmPlot />
+					<SwarmPlot data={data} />
 				</div>
 			</FlexboxGrid.Item>
 		</FlexboxGrid>

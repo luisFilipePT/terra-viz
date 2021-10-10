@@ -1,15 +1,13 @@
 import { ResponsivePie } from '@nivo/pie';
-import { usePieData } from '../../hooks/usePieData';
 import ArcLabels from './parts/ArcLabels';
 import CenteredMetrics from './parts/CenteredMetrics';
 import Tooltip from './parts/Tooltip';
 
-const Pie = ({ mode }) => {
-	const data = usePieData();
-
+const Pie = ({ data, mode }) => {
+	console.log(data);
 	return (
 		<ResponsivePie
-			data={data[mode]}
+			data={data}
 			margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
 			innerRadius={0.5}
 			padAngle={0.7}
