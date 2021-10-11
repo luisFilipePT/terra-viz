@@ -26,6 +26,17 @@ body {
 	height: 90vh;
 }
 
+.message-live {
+	text-align: center;
+	width: 80%;
+}
+
+.rs-message-body {
+	color: black !important;
+	font-size: 20px;
+	font-family: orbitron, sans-serif;
+}
+
 .table-wrapper {
 	margin-top: 4rem;
 	padding: 0 0 3rem 0;
