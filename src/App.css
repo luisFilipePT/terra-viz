@@ -42,19 +42,7 @@ body {
 	padding: 0 0 3rem 0;
 	color: #ffee00;
 	background-image: url('https://starterra.io/image/starterratlo.jpg');
-	box-shadow: inset 0 45px 50px 0px rgba(40, 44, 52, 1);
-}
-
-.table-wrapper > div {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 0 6rem 6rem 6rem;
-}
-
-@media screen and (max-width: 600px) {
-	.table-wrapper > div {
-		padding: 0.5rem;
-	}
+	box-shadow: inset 0 45px 50px 0 rgba(40, 44, 52, 1);
 }
 
 .pie-container {

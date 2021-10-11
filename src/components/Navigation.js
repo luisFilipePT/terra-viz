@@ -9,7 +9,7 @@ const data = [
 	{
 		title: 'Total contributors',
 		subtitle: 'The ship is full',
-		description: 'Find total contributors and contributors by faction',
+		description: 'Total and by faction contributors',
 		target: '/#section2',
 		icon: <Icon as={FaUsers} size="1em" fill="#ffFFFF" />,
 	},
@@ -36,7 +36,7 @@ const data = [
 	},
 	{
 		title: 'Creators',
-		subtitle: 'Hey, if you like it reach out and buy us a beer',
+		subtitle: 'Like it? reach out and say hi!',
 		description: 'Who in mars did this?',
 		target: '/#section6',
 		icon: <Icon as={FaHeart} size="1em" fill="#c74dad" />,

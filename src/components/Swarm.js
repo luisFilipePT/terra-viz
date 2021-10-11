@@ -54,18 +54,18 @@ const SwarmPlot = ({ data }) => {
 				tickRotation: isMobile ? 45 : 0,
 				legendPosition: 'middle',
 				legendOffset: isMobile ? 0 : -46,
-				format: value => formatNumber(value, 0, true),
+				format: value => (isMobile ? value : formatNumber(value, 0, true)),
 			}}
 			axisRight={null}
 			axisLeft={null}
 			axisBottom={{
 				orient: 'bottom',
 				tickSize: 10,
-				tickPadding: isMobile ? 15 : 5,
-				tickRotation: isMobile ? 50 : 0,
+				tickPadding: isMobile ? 35 : 5,
+				tickRotation: isMobile ? 0 : 0,
 				legendPosition: 'middle',
-				legendOffset: 46,
-				format: value => formatNumber(value, 0, true),
+				legendOffset: isMobile ? -140 : 46,
+				format: value => (isMobile ? value : formatNumber(value, 0, true)),
 			}}
 			tooltip={({ data: { ste } }) => (
 				<div

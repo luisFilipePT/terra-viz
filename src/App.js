@@ -4,13 +4,13 @@ import { Helmet } from 'react-helmet';
 import Fade from 'react-reveal/Fade';
 
 import Particles from './components/Particles';
-import DataTable from './components/DataTable';
 import StarTerraLogo from './components/StarTerraLogo';
 import Section2 from './sections/section2';
 import Section3 from './sections/section3';
 import Section4 from './sections/section4';
 import Navigation from './components/Navigation';
 import { useData } from './hooks/useData';
+import Section5 from './sections/section5';
 
 function App() {
 	const [top100factionsData, stakersPieData, lp, stt, ste, statistics, tableData] = useData();
@@ -56,10 +56,7 @@ function App() {
 					<Section2 data={stakersPieData} />
 					<Section3 data={top100factionsData} />
 					<Section4 data={{ lp, stt, ste }} statistics={statistics} />
-					<div id="section5" className="table-wrapper">
-						<h2 className="tittle">Visual representation of CSV file</h2>
-						<DataTable data={tableData} />
-					</div>
+					<Section5 data={tableData} />
 				</Content>
 				<Footer>
 					<div id="section6" className="footer">
