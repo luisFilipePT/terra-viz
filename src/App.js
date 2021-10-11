@@ -1,4 +1,4 @@
-import { Container, Content, Footer, Header, Navbar } from 'rsuite';
+import { Container, Content, Footer, Header, Navbar, Message } from 'rsuite';
 import GithubCorner from 'react-github-corner';
 import { Helmet } from 'react-helmet';
 import Fade from 'react-reveal/Fade';
@@ -50,6 +50,17 @@ function App() {
 					</Navbar>
 				</Header>
 				<Content>
+					<div
+						style={{
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+							zIndex: 2000,
+							position: 'relative',
+						}}
+					>
+						<Message className="message-live">https://starterra-viz.netlify.app/</Message>
+					</div>
 					<Fade>
 						<Navigation />
 					</Fade>

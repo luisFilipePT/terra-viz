@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 
 import { average, groupBy } from './utils';
-import { mean, median, medianSorted, sampleSkewness, standardDeviation, variance } from 'simple-statistics';
+import { mean, medianSorted, sampleSkewness, standardDeviation, variance } from 'simple-statistics';
 
 const groupByFaction = data => {
 	return groupBy(data, item => item.faction);
