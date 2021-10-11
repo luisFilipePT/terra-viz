@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 
 import { average, groupBy } from './utils';
+import { mean, median, medianSorted, sampleSkewness, standardDeviation, variance } from 'simple-statistics';
 
 const groupByFaction = data => {
 	return groupBy(data, item => item.faction);
@@ -82,8 +83,33 @@ const getPerFaction = (degens, lunatics, interstellars, all, predicate) => {
 	];
 };
 
+const getStatistic = dataSet => ({
+	mean: mean(dataSet),
+	median: medianSorted(dataSet),
+	skewness: sampleSkewness(dataSet),
+	variance: variance(dataSet),
+	standardDeviation: standardDeviation(dataSet),
+});
+
+const getStatisticsPerFaction = data => {
+	const LPData = data.map(e => Number(e.lp));
+	const STTData = data.map(e => Number(e.stt));
+	const STEData = data.map(e => Number(e.ste));
+
+	console.log(
+		'test',
+		data.filter(e => e.stt === '0'),
+	);
+
+	return {
+		lp: getStatistic(LPData),
+		stt: getStatistic(STTData),
+		ste: getStatistic(STEData),
+	};
+};
+
 export const useData = () => {
-	const [data, setData] = useState([[], [], [], [], [], []]);
+	const [data, setData] = useState([[], [], [], [], [], {}, []]);
 
 	const parseData = results => {
 		const totalResults = results.data.length;
@@ -98,6 +124,7 @@ export const useData = () => {
 			getPerFaction(degensData, lunaticsData, interstellarsData, results.data, 'lp'),
 			getPerFaction(degensData, lunaticsData, interstellarsData, results.data, 'stt'),
 			getPerFaction(degensData, lunaticsData, interstellarsData, results.data, 'ste'),
+			getStatisticsPerFaction(results.data),
 			results.data,
 		]);
 	};

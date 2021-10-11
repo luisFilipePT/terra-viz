@@ -13,7 +13,7 @@ import Navigation from './components/Navigation';
 import { useData } from './hooks/useData';
 
 function App() {
-	const [top100factionsData, stakersPieData, lp, stt, ste, tableData] = useData();
+	const [top100factionsData, stakersPieData, lp, stt, ste, statistics, tableData] = useData();
 
 	return (
 		<>
@@ -55,8 +55,9 @@ function App() {
 					</Fade>
 					<Section2 data={stakersPieData} />
 					<Section3 data={top100factionsData} />
-					<Section4 data={{ lp, stt, ste }} />
+					<Section4 data={{ lp, stt, ste }} statistics={statistics} />
 					<div id="section5" className="table-wrapper">
+						<h2 className="tittle">Visual representation of CSV file</h2>
 						<DataTable data={tableData} />
 					</div>
 				</Content>

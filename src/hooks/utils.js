@@ -18,7 +18,7 @@ export const groupBy = (list, keyGetter) => {
 
 export const formatNumber = (value, decimal = 0, abbreviate = false) =>
 	abbreviate
-		? abbreviateNumber(value, decimal).replace(/\.0+/, '')
-		: Number(value).toFixed(decimal).replace(/\.0+/, '');
+		? abbreviateNumber(value, decimal).replace(/\.0+$/, '')
+		: Number(value).toFixed(decimal).replace(/\.0+$/, '');
 
 export const average = (amount, total) => ((amount * 100) / total).toFixed(2);

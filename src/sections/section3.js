@@ -5,19 +5,9 @@ import SwarmPlot from '../components/Swarm';
 
 const Section3 = ({ data }) => (
 	<div id="section3" className="show-grid">
+		<h2 className="tittle">Starterra Energy - Top 100 per faction</h2>
 		<FlexboxGrid align="middle">
 			<FlexboxGrid.Item as={Col} colspan={24} md={6}>
-				<div style={{ padding: 16, textAlign: 'center', height: 200, fontFamily: 'orbitron,sans-serif' }}>
-					<Zoom>
-						<h4>Degens</h4>
-						<img
-							alt="degens"
-							width="320px"
-							height="123px"
-							src="https://app.starterra.io/static/media/degens-banner.4bf98705.png"
-						/>
-					</Zoom>
-				</div>
 				<div style={{ padding: 16, textAlign: 'center', height: 200, fontFamily: 'orbitron,sans-serif' }}>
 					<Zoom>
 						<h4>Lunatics</h4>
@@ -37,6 +27,17 @@ const Section3 = ({ data }) => (
 							width="320px"
 							height="123px"
 							src="https://app.starterra.io/static/media/interstellars-banner.3c689592.png"
+						/>
+					</Zoom>
+				</div>
+				<div style={{ padding: 16, textAlign: 'center', height: 200, fontFamily: 'orbitron,sans-serif' }}>
+					<Zoom>
+						<h4>Degens</h4>
+						<img
+							alt="degens"
+							width="320px"
+							height="123px"
+							src="https://app.starterra.io/static/media/degens-banner.4bf98705.png"
 						/>
 					</Zoom>
 				</div>

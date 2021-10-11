@@ -8,7 +8,7 @@ const SwarmPlot = ({ data }) => {
 		<ResponsiveSwarmPlot
 			theme={{
 				background: 'transparent',
-				textColor: '#ffee00',
+				textColor: 'rgb(233, 235, 240)',
 				fontSize: 14,
 				axis: {
 					domain: {
@@ -37,7 +37,7 @@ const SwarmPlot = ({ data }) => {
 			enableGridY={false}
 			gap={18}
 			data={data}
-			groups={['degens', 'lunatics', 'interstellars']}
+			groups={['lunatics', 'interstellars', 'degens']}
 			groupBy="faction"
 			identity="staker"
 			value="ste"
@@ -52,9 +52,9 @@ const SwarmPlot = ({ data }) => {
 				tickSize: 10,
 				tickPadding: isMobile ? 15 : 5,
 				tickRotation: isMobile ? 45 : 0,
-				legend: 'starterra energy - Top 100 / faction',
 				legendPosition: 'middle',
 				legendOffset: isMobile ? 0 : -46,
+				format: value => formatNumber(value, 0, true),
 			}}
 			axisRight={null}
 			axisLeft={null}
@@ -65,6 +65,7 @@ const SwarmPlot = ({ data }) => {
 				tickRotation: isMobile ? 50 : 0,
 				legendPosition: 'middle',
 				legendOffset: 46,
+				format: value => formatNumber(value, 0, true),
 			}}
 			tooltip={({ data: { ste } }) => (
 				<div
