@@ -1,21 +1,15 @@
 import { Col, FlexboxGrid } from 'rsuite';
+import Zoom from 'react-reveal/Zoom';
+
 import SwarmPlot from '../components/Swarm';
 
-const Section3 = () => (
+const Section3 = ({ data }) => (
 	<div id="section3" className="show-grid">
+		<h2 className="tittle">Starterra Energy - Top 100 per faction</h2>
 		<FlexboxGrid align="middle">
 			<FlexboxGrid.Item as={Col} colspan={24} md={6}>
-				<div style={{ paddingTop: 30 }}>
-					<div style={{ padding: 16, textAlign: 'center', height: 250, fontFamily: 'orbitron,sans-serif' }}>
-						<h4>Degens</h4>
-						<img
-							alt="degens"
-							width="320px"
-							height="123px"
-							src="https://app.starterra.io/static/media/degens-banner.4bf98705.png"
-						/>
-					</div>
-					<div style={{ padding: 16, textAlign: 'center', height: 250, fontFamily: 'orbitron,sans-serif' }}>
+				<div style={{ padding: 16, textAlign: 'center', height: 200, fontFamily: 'orbitron,sans-serif' }}>
+					<Zoom>
 						<h4>Lunatics</h4>
 						<img
 							alt="lunatics"
@@ -23,8 +17,10 @@ const Section3 = () => (
 							height="123px"
 							src="https://app.starterra.io/static/media/lunatics-banner.d4b8ebc9.png"
 						/>
-					</div>
-					<div style={{ padding: 16, textAlign: 'center', height: 250, fontFamily: 'orbitron,sans-serif' }}>
+					</Zoom>
+				</div>
+				<div style={{ padding: 16, textAlign: 'center', height: 220, fontFamily: 'orbitron,sans-serif' }}>
+					<Zoom>
 						<h4>Interstellars</h4>
 						<img
 							alt="interstellars"
@@ -32,12 +28,23 @@ const Section3 = () => (
 							height="123px"
 							src="https://app.starterra.io/static/media/interstellars-banner.3c689592.png"
 						/>
-					</div>
+					</Zoom>
+				</div>
+				<div style={{ padding: 16, textAlign: 'center', height: 200, fontFamily: 'orbitron,sans-serif' }}>
+					<Zoom>
+						<h4>Degens</h4>
+						<img
+							alt="degens"
+							width="320px"
+							height="123px"
+							src="https://app.starterra.io/static/media/degens-banner.4bf98705.png"
+						/>
+					</Zoom>
 				</div>
 			</FlexboxGrid.Item>
 			<FlexboxGrid.Item as={Col} colspan={24} md={18} sm={24}>
 				<div className="swarm-container">
-					<SwarmPlot />
+					<SwarmPlot data={data} />
 				</div>
 			</FlexboxGrid.Item>
 		</FlexboxGrid>

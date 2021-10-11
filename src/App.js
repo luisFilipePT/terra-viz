@@ -1,6 +1,7 @@
 import { Container, Content, Footer, Header, Navbar } from 'rsuite';
 import GithubCorner from 'react-github-corner';
 import { Helmet } from 'react-helmet';
+import Fade from 'react-reveal/Fade';
 
 import Particles from './components/Particles';
 import DataTable from './components/DataTable';
@@ -9,8 +10,11 @@ import Section2 from './sections/section2';
 import Section3 from './sections/section3';
 import Section4 from './sections/section4';
 import Navigation from './components/Navigation';
+import { useData } from './hooks/useData';
 
 function App() {
+	const [top100factionsData, stakersPieData, lp, stt, ste, statistics, tableData] = useData();
+
 	return (
 		<>
 			<Helmet>
@@ -46,12 +50,15 @@ function App() {
 					</Navbar>
 				</Header>
 				<Content>
-					<Navigation />
-					<Section2 />
-					<Section3 />
-					<Section4 />
+					<Fade>
+						<Navigation />
+					</Fade>
+					<Section2 data={stakersPieData} />
+					<Section3 data={top100factionsData} />
+					<Section4 data={{ lp, stt, ste }} statistics={statistics} />
 					<div id="section5" className="table-wrapper">
-						<DataTable />
+						<h2 className="tittle">Visual representation of CSV file</h2>
+						<DataTable data={tableData} />
 					</div>
 				</Content>
 				<Footer>

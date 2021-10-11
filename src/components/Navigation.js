@@ -118,10 +118,12 @@ const Navigation = () => {
 									colspan={7}
 									style={{
 										...styleCenter,
+										fontFamily: 'orbitron,sans-serif',
+										letterSpacing: 2,
 									}}
 								>
 									<Link smooth to={item['target']}>
-										View
+										VIEW
 									</Link>
 								</FlexboxGrid.Item>
 							</FlexboxGrid>
